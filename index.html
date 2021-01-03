@@ -5,10 +5,10 @@
 	<title>聊笔阁 小说推荐网</title>
 	<link rel="stylesheet" type="text/css" href="./css/主要页面.css">
 	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script src="./js/template-web.js"></script>
 	<script src="./js/cookies.js"></script>
 	<script src="./js/前端路由.js"></script>
 	<script src="./js/index.js"></script>
-
 </head>
 <body style="min-width:1263.33px" id="body1" onload="check()">
 	<div class="in-background"></div>
@@ -54,48 +54,30 @@
 			</div>
 		</div>
             <div class="bookshelf" id="bookshelf">
-			    <div class="book1" id="1">
-							<a href="dldl.html" class="fm"><img class="dl" src="images\封面1.jpg"></a>
-							<a href="dldl.html" style="text-decoration: none;float:left"><h1>斗罗大陆</h1></a> <h3 align="right">唐家三少</h3>
-							<hr>
-						    <br>
-							<p>唐门外门弟子唐三，因偷学内门绝学为唐门所不容，跳崖明志却未死，反而以另外一个身份来到了另一个世界，一个属于武魂的世界，名叫斗罗大陆。这里没有魔法，没有斗气，没有武术，却有神奇的武魂。</p>
-                </div>
-                <div class="book2" id="2">
-							<a href="ztjt.html" class="fm"><img class="dl" src="images\诸天尽头.jpg"></a>
-							<a href="ztjt.html" style="text-decoration: none;float:left;"><h1>诸天尽头</h1></a> <h3 align="right">凤嘲凰</h3>
-							<hr>
-							<br>
-							<p>从平凡到传奇，从普通到不朽，从刹那到永恒……</p><p>这是一个行走在诸天世界的故事！</p><p>故事的开头，从罗素调教完系统说起。</p>
-                </div>
-				<div style="clear:both;"></div>
-				<div class="book1" id="3">
-					<a href="dyxl.html" class="fm"><img class="dl" src="images\第一序列.jpg"></a>
-					<a href="dyxl.html" style="text-decoration: none;float:left"><h1>第一序列</h1></a> <h3 align="right">会说话的肘子</h3>
-					<hr>
-					<br>
-					<p>废土之上，人类文明得以苟延残喘。座座壁垒拔地而起，秩序却不断崩坏。
-					有人说，当灾难降临时，精神意志才是人类面对危险的第一序列武器。
-					有人说，不要让时代的悲哀，成为你的悲哀。
-					有人说，我要让我的悲哀，成为这个时代的悲哀。
-					这次是一个新的故事。
-					浩劫余生，终见光明。</p>
-				</div>
-				<div class="book2" id="4">
-					<a href="jxdn.html" class="fm"><img class="dl" src="images\九星毒奶.jpg"></a>
-					<a href="jxdn.html" style="text-decoration: none;float:left;"><h1>九星毒奶</h1></a> <h3 align="right">育</h3>
-					<hr>
-					<br>
-					<p>这是一个充满了星力的平行世界。</p>
-					<p>	星图、星技、星宠、觉醒者大行其道。</p>
-					<p>魂穿而来的江晓，体内蕴含着一张奇特的内视星图，成为一名稀有的医疗系觉醒者。</p>
-					<p>他本想成为一只快乐的大奶，但却被众人冠上了毒奶之名。这一切的故事，要从那一巴掌开始说起......</p>
-				</div>
-				<div style="clear:both;"></div>
+			    
             </div>
 			<div id="footer"></div>
 	</div>
 	<script src="./js/轮播图.js"></script>
 	<script src="./js/footer.js"></script>
+	<script type="text/html"  id="book1">
+		<div class="book1">
+			{{@image}}
+			<h1>{{@name}}</h1> <h3 align="right">{{author}}</h3>
+			<hr>
+			<br>
+			<pre>{{introduction}}</pre>
+		</div>
+	</script>
+	<script type="text/html" id="book2">
+		<div class="book2">
+		{{@image}}
+		<h1>{{@name}}</h1> <h3 align="right">{{author}}</h3>
+		<hr>
+		<br>
+		<pre>{{introduction}}</pre>
+		</div>
+	</script>
+	<script src="./js/mb.js"></script>
 </body>
 </html>
