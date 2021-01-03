@@ -1,1 +1,1 @@
-$("#footer").load("../mb/footer.html");
+$("#footer").load("https://coco-ly.github.io/web/mb/footer.html");
