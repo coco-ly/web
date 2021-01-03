@@ -1,0 +1,1 @@
+$("#footer").load("../mb/footer.html");

@@ -1,0 +1,160 @@
+@import "normalize.css";
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background:
+    linear-gradient(135deg, #494742 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg,  #494742  21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color :#494742 ;
+    background-size: 64px 128px;
+    z-index: 1;
+}
+.introduce h1{
+    color: honeydew;
+}
+.introduce p{
+    color: honeydew;
+}
+.background{
+    background-color:#c9c3b6;
+    z-index: 3;
+    margin-top: 50px;
+    margin-left:12% ;
+    margin-right: 12%;
+}
+.main{
+    background:url(../images/ztjt背景.png); 
+    background-position: center 0;   
+    background-repeat: no-repeat;     
+    background-size: 1000px 600px;   
+    zoom: 1;
+    border: solid 1px rgb(122, 46, 46);
+}
+.header{
+    display: flex;
+}
+.header_logo a {
+    margin-left: 28px;
+    background-position: 0 -35px;
+    display: block;
+    float: left;
+    height: 92px;
+    width: 114px;
+}
+.ss{
+    align-self: center;
+}
+.ssl{
+    width:600px;height:40px;font-size:larger
+}
+.ssb{
+    width:50px;height:45px;
+}
+.kind ul{
+    list-style:none;
+    background-color:#88C6E5;
+    width:100%;
+    height: 28px;
+    overflow: hidden;
+    zoom: 1;
+}
+.kind li{
+    float: left;
+    width: 20%;
+}
+.kind a,button{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 3px 0px;
+    text-decoration: none;
+    color:white ;
+    font-weight: bold;
+}
+.kind a:hover{
+    text-align: center;
+    background-color: #6dc0e9;
+}
+.top{
+    margin-top: 30px;
+}
+.fm{
+    background-color: #8e9292;
+    padding: 12px;
+    margin: 12px;
+    width: 126px;
+    float: left;
+}
+.fm img{
+    float: left;
+    width:120px;
+    height: 150px;
+    margin: 3px;
+}
+.info p{
+    height: 25px;
+    line-height: 25px;
+    padding-top: 2px;
+    width: 350px;
+    margin: auto;
+    overflow: hidden;
+    float: left;
+}
+.intro{
+    width: 96%;
+    overflow: hidden;
+    line-height: 150%;
+    border-top: 2px dashed #05a5f5;
+    padding: 10px;
+    font-size: 13px;
+}
+.intro p {
+    text-indent: 2em;
+    margin-top: 10px;
+}
+.introduce{
+    float: right;
+    width: 700px;
+}
+#txt{
+    width: 60%;
+    height: 100px;
+}
+.role{
+    margin-top: 50px;
+}
+#footer{
+    margin-top: 50px;
+    
+}
+.bottom{
+    margin-top: 20px;
+}
+@media only screen and (max-width: 500px) {
+    .main{
+        width:100%;
+        background-size: 100%;
+    }
+    .ssl{
+        width:70%;height:15px;font-size:larger
+    }
+    .ssb{
+        width:10%px;height:20px;
+    }
+    .logo{
+        background-position: 0 -35px;
+        display: block;
+        float: left;
+        height:46px;
+        width: 57px;
+    }
+    .header_logo a {
+    background-position: 0 -35px;
+    display: block;
+    float: left;
+    height: 46px;
+    width: 57px;
+}
+}
