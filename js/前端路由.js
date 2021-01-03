@@ -17,19 +17,19 @@ function onHashChange () {
   switch (location.hash) {
     case '#/sw':
         a.innerHTML="";
-        $("#bookshelf").load("../mb/sw.html");
+        $("#bookshelf").load("./mb/sw.html");
         return
     case '#/sd':
         a.innerHTML="";
-        $("#bookshelf").load("../mb/sd.html");
+        $("#bookshelf").load("./mb/sd.html");
       return
     case '#/wx':
         a.innerHTML="";
-        $("#bookshelf").load("../mb/wx.html");
+        $("#bookshelf").load("./mb/wx.html");
     return
     case '#/all':
         a.innerHTML="";
-        $("#bookshelf").load("../mb/all.html");
+        $("#bookshelf").load("./mb/all.html");
     return
     default:
       return
