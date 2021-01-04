@@ -10,8 +10,7 @@
 	<script src="./js/前端路由.js"></script>
 	<script src="./js/index.js"></script>
 </head>
-<body style="min-width:1263.33px" id="body1" onload="check()">
-	<div class="in-background"></div>
+<body  id="body1" onload="check()">
 	<header class="nav" id="nav">
 		<ul>
 			<li><a href="index.html"><i class="iconfont">&#xe7b3;</i>首页</a></li>
@@ -20,18 +19,44 @@
 			<li class="nav1" id="nav1" align="center"><pre>  </pre></li>
 		</ul>
 	</header>
-	<br><br>
+	<div class="hang"><br></div>
 	<div class="title">
-        
+        <nav>
             <div class="kind">
-				<ul>
+				<ul class="level">
 				    <li><a href="index.html">首页</a></li>
-				    <li><a href="#/sw">热血爽文</a></li>
-					<li><a href="#/sd">搞笑沙雕</a></li>
-					<li><a href="#/wx">无限世界</a></li>
-					<li><a href="#/all">全部小说</a></li>
+				    <li>
+						<a href="#/sw">热血爽文</a>
+						<ul class="two">
+							<a href="dldl.html"><li>斗罗大陆</li></a>
+							<a href='dyxl.html'><li>第一序列</li></a>
+						</ul>		
+					</li>
+					<li>
+						<a href="#/sd">搞笑沙雕</a>
+						<ul class="two">
+							<a href="ztjt.html"><li>诸天尽头</li></a>
+							<a href='jxdn.html'><li>九星毒奶</li></a>
+						</ul>
+					</li>
+					<li>
+						<a href="#/wx">无限世界</a>
+						<ul class="two">
+							<a href="ztjt.html"><li>诸天尽头</li></a>
+						</ul>
+					</li>
+					<li>
+						<a href="#/all">全部小说</a>
+						<ul class="two">
+							<a href="dldl.html"><li>斗罗大陆</li></a>
+							<a href="ztjt.html"><li>诸天尽头</li></a>
+							<a href='dyxl.html'><li>第一序列</li></a>
+							<a href='jxdn.html'><li>九星毒奶</li></a>
+						</ul>
+					</li>
 				</ul>
-            </div>
+			</div>
+		</nav>
 		<div id="lbt">
 			<div class="box" id="box">
 				<div class="inner">
@@ -63,7 +88,7 @@
 	<script type="text/html"  id="book1">
 		<div class="book1">
 			{{@image}}
-			<h1>{{@name}}</h1> <h3 align="right">{{author}}</h3>
+			<h1>{{@name}}</h1> <h4 align="right">{{author}}</h4>
 			<hr>
 			<br>
 			<pre>{{introduction}}</pre>
@@ -72,7 +97,7 @@
 	<script type="text/html" id="book2">
 		<div class="book2">
 		{{@image}}
-		<h1>{{@name}}</h1> <h3 align="right">{{author}}</h3>
+		<h1>{{@name}}</h1> <h4 align="right">{{author}}</h4>
 		<hr>
 		<br>
 		<pre>{{introduction}}</pre>

@@ -11,6 +11,9 @@ body{
     background-size: 64px 128px;
     z-index: 1;
 }
+.nav{
+    margin-top: 0px;
+}
 .nav ul{
     list-style:none;
     position:fixed;
@@ -49,9 +52,8 @@ body{
     font-weight: bold;
 }
 .title{
-    margin-top: 20px;
-    margin-left:8% ;
-    margin-right: 8%;
+    width: 980px;
+    margin: 20px auto;
     background-color:#f0dfbb;
     z-index: 2;
 }
@@ -82,18 +84,24 @@ body{
 }
 .bookshelf{
     margin: 30px 60px 30px 60px;
+    position: relative;
 }
 .dl{
     width: 150px;
     height: 210px;
 }
-.kind ul{
+.kind{
+    position: relative;
+    z-index: 1000;
+}
+.level{
     list-style:none;
     background-color:#88C6E5;
     width: 100%;
     height: 28px;
-    overflow: hidden;
     zoom: 1;
+    position: relative;
+    z-index: 1000;
 }
 .kind li{
     float: left;
@@ -110,8 +118,31 @@ body{
 }
 .kind a:hover{
     text-align: center;
-    background-color: #6dc0e9;
+    background-color: #06a7f8;
 }
+.two{
+    list-style:none;
+    position: absolute; 
+	display: none; 	
+	width: 20%; 
+	margin: 0px; 
+	padding: 0px; 
+	color:#205D67; 
+}  /* 先使二级菜单的内容隐藏 */
+.level>li:hover .two{display: block;}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+.two a{
+    display: inline;
+}
+.two li{
+    padding: 5px ;
+    transition: .4s;
+    cursor: pointer;   
+    width: 100%;
+    background-color:#88C6E5; 
+	box-sizing: border-box; 
+	width: 100%;
+}
+.two li:hover{background-color: #06a7f8;}
 .fm{
     background-position: 0 -35px;
     display: block;
@@ -158,18 +189,22 @@ body{
     background-color: rgba(0, 195, 255, 0.952);
     margin: 30px auto;
     padding: 5px;
-
+    z-index:2;
+    position:relative;
+    
 }
 .inner{
     width: 900px;
     height: 300px;
-    position: relative;
+    position: absolute;
     overflow: hidden;
+
 }
 .inner img{
     width: 900px;
     height: 300px;
-    vertical-align: top
+    vertical-align: top;
+    z-index:10;
 }
 .lb {
     width: 1000%;
@@ -248,4 +283,71 @@ color: #000;
 }
 .bottom{
     margin-top: 20px;
+}
+@media (max-width: 576px) {
+
+    .nav{
+        width:100%;
+        display: none; 	
+    }
+    .hang{
+        display: none;
+    }
+    .title{
+        margin-top: 0px;
+        width: 100%;
+        background-color:#f0dfbb;
+        z-index: 2;
+    }
+    .box{
+        display: none;
+    }
+    .kind{
+        position: relative;
+        z-index: 1000;
+        width: 100%;
+    }
+    .level{
+        list-style:none;
+        background-color:#88C6E5;
+        width: 100%;
+        height: 28px;
+        zoom: 1;
+        position: relative;
+        z-index: 1000;
+    }
+    .kind li{
+        float: left;
+        width: 20%;
+    }
+    .kind a,button{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        padding: 3px 0px;
+        text-decoration: none;
+        color:white ;
+        font-weight: bold;
+    }
+    .kind a:hover{
+        text-align: center;
+        background-color: #06a7f8;
+    }
+    .two{
+        list-style:none;
+        position: absolute; 
+        display: none; 	
+        width: 20%; 
+        margin: 0px; 
+        padding: 0px; 
+    }  /* 先使二级菜单的内容隐藏 */
+    .book1,.book2{
+        float: left;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .level>li:hover .two{display: none;}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+    .bottom{
+        display: none; 	
+    }
 }

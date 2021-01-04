@@ -11,10 +11,10 @@ body{
     background-size: 64px 128px;
     z-index: 1;
 }
-.introduce h1{
+.introduce,.info h1{
     color: rgb(124, 206, 212);
 }
-.introduce p{
+.introduce,.info p{
     color: rgb(124, 206, 212);
 }
 .background{
@@ -52,13 +52,18 @@ body{
 .ssb{
     width:50px;height:45px;
 }
-.kind ul{
+.kind{
+    position: relative;
+    z-index: 1000;
+}
+.level{
     list-style:none;
     background-color:#88C6E5;
-    width:100%;
+    width: 100%;
     height: 28px;
-    overflow: hidden;
     zoom: 1;
+    position: relative;
+    z-index: 1000;
 }
 .kind li{
     float: left;
@@ -75,8 +80,31 @@ body{
 }
 .kind a:hover{
     text-align: center;
-    background-color: #6dc0e9;
+    background-color: #06a7f8;
 }
+.two{
+    list-style:none;
+    position: absolute; 
+	display: none; 	
+	width: 20%; 
+	margin: 0px; 
+	padding: 0px; 
+}  /* 先使二级菜单的内容隐藏 */
+.level>li:hover .two{display: block;}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+.two a{
+    display: inline;
+}
+.two li{
+    padding: 5px 0;
+    transition: .4s;
+    cursor: pointer;   
+    width: 100%;
+    background-color:#88C6E5;  
+	box-sizing: border-box; 
+    width: 100%;
+    border-color: black;
+}
+.two li:hover{background-color: #06a7f8;}
 .top{
     margin-top: 30px;
 }
@@ -93,6 +121,9 @@ body{
     height: 150px;
     margin: 3px;
 }
+.info{
+    float: right;
+}
 .info p{
     height: 25px;
     line-height: 25px;
@@ -103,7 +134,8 @@ body{
     float: left;
 }
 .intro{
-    width: 96%;
+    width: 100%;
+    width: 90%;
     overflow: hidden;
     line-height: 150%;
     border-top: 2px dashed #05a5f5;
@@ -117,6 +149,7 @@ body{
 .introduce{
     float: right;
     width: 700px;
+    position: relative;
 }
 #txt{
     width: 60%;
@@ -132,29 +165,116 @@ body{
 .bottom{
     margin-top: 20px;
 }
-@media only screen and (max-width: 500px) {
-    .main{
+@media only screen and (max-width: 576px) {
+    .background{
+        background-color:#c9c3b6;
+        z-index: 3;
         width:100%;
-        background-size: 100%;
+        margin: 0 auto;
     }
-    .ssl{
-        width:70%;height:15px;font-size:larger
+    .main{
+        width: 100%;
     }
-    .ssb{
-        width:10%px;height:20px;
+    .kind{
+        position: relative;
+        z-index: 1000;
+        width: 100%;
     }
-    .logo{
-        background-position: 0 -35px;
-        display: block;
+    .level{
+        list-style:none;
+        background-color:#88C6E5;
+        width: 100%;
+        height: 28px;
+        zoom: 1;
+        position: relative;
+        z-index: 1000;
+    }
+    .kind li{
         float: left;
-        height:46px;
-        width: 57px;
+        width: 20%;
     }
-    .header_logo a {
-    background-position: 0 -35px;
-    display: block;
-    float: left;
-    height: 46px;
-    width: 57px;
-}
+    .kind a,button{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        padding: 3px 0px;
+        text-decoration: none;
+        color:white ;
+        font-weight: bold;
+    }
+    .kind a:hover{
+        text-align: center;
+        background-color: #06a7f8;
+    }
+    .two{
+        list-style:none;
+        position: absolute; 
+        display: none; 	
+        width: 20%; 
+        margin: 0px; 
+        padding: 0px; 
+    }  /* 先使二级菜单的内容隐藏 */
+    .level>li:hover .two{display: none;}   /* 鼠标滑过一级菜单后的显示二级菜单 */
+    .top{
+        margin-top: 3px;
+    }
+    .fm{
+        background-color: #8e9292;
+        padding: 12px;
+        margin: 2px auto;
+        width: 126px;
+        
+    }
+    .fm img{
+        float: left;
+        width:120px;
+        height: 150px;
+        margin: 3px;
+    }
+    .info{
+        float: right;
+        width: 50%;
+        margin-top: 30px;
+    }
+    .info p{
+        height: 25px;
+        width: 100%;
+        line-height: 25px;
+        padding-top: 2px;
+        margin: auto;
+        overflow: hidden;
+        float: left;
+    }
+    .fg{
+        clear: both;
+    }
+    .intro{
+        overflow: hidden;
+        line-height: 150%;
+        border-top: 2px dashed #05a5f5;
+        padding: 10px;
+        font-size: 13px;
+    }
+    .intro p {
+        text-indent: 2em;
+        margin-top: 10px;
+    }
+    .introduce{
+        width: 100%;
+        position: relative;
+    }
+    #txt{
+        width: 60%;
+        height: 100px;
+    }
+    .role{
+        margin-top: 50px;
+    }
+    #footer{
+        margin-top: 50px;
+        
+    }
+    .bottom{
+        display: none; 	
+    }
 }
