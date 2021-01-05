@@ -150,7 +150,7 @@ body{
 .bottom{
     margin-top: 20px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
     .background{
         background-color:#c9c3b6;
         z-index: 3;
@@ -234,7 +234,6 @@ body{
         clear: both;
     }
     .intro{
-        width: 100%;
         overflow: hidden;
         line-height: 150%;
         border-top: 2px dashed #05a5f5;
